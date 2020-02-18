@@ -53,3 +53,8 @@
 - [KK](https://github.com/bebound)
 - [Eli W. Hunter](https://github.com/elihunter173)
 - [Víctor López](https://github.com/viticlick)
+- [Anson VanDoren](https://github.com/anson-vandoren)
+- [Michael Lynch](https://github.com/mtlynch)
+- [FIGBERT](https://figbert.com/)
+- [Yash Mehrotra](https://yashmehrotra.com)
+- [Paolo Mainardi](https://paolomainardi.com)
