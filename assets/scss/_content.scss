@@ -52,7 +52,7 @@ $white-text-color: #dadada;
   }
 
   .project-item {
-    width: $project-item-width;
+    min-width: $project-item-width;
     padding: 12px 16px;
     background-color: $white-text-color;
 

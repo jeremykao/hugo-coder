@@ -1,9 +1,7 @@
 <div class="project-item grid-item">
   <a class="project-link" href="{{ .Params.ExternalLink | default .RelPermalink }}">
     <h2 class="project-title">{{.Title}}</h2>
-    <div class="date">
-      {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
-    </div>
     <p>{{ .Description }}</p>
-  </a c>
+    {{ with .Page.Params.Skills }}{{ partial "taxonomy/skills.html" . }}{{ end }}
+  </a>
 </div>
