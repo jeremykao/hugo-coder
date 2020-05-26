@@ -52,6 +52,8 @@ $white-text-color: #dadada;
   }
 
   .project-item {
+    display: flex;
+    flex-direction: column;
     min-width: $project-item-width;
     padding: 12px 16px;
     background-color: $white-text-color;
@@ -62,6 +64,7 @@ $white-text-color: #dadada;
     }
     .project-link {
       text-decoration: none;
+      flex: 1;
     }
     .project-title {
       color: $black-text-color;

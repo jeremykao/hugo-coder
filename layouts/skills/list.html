@@ -1,0 +1,15 @@
+{{ define "title" }}
+  {{- i18n .Data.Singular | title -}}
+  {{- print ": " -}}
+  {{ .Title }} · {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+  <section class="container">
+    <h1 class="title">{{ .Title }}</h1>
+    <div class="grid">
+      {{- range .Paginator.Pages -}}
+        {{- .Render "../projects/li" -}}
+      {{- end -}}
+    </div>
+  </section>
+{{ end }}

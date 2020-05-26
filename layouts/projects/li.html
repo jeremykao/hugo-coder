@@ -1,7 +1,1 @@
-<div class="project-item grid-item">
-  <a class="project-link" href="{{ .Params.ExternalLink | default .RelPermalink }}">
-    <h2 class="project-title">{{.Title}}</h2>
-    <p>{{ .Description }}</p>
-    {{ with .Page.Params.Skills }}{{ partial "taxonomy/skills.html" . }}{{ end }}
-  </a>
-</div>
+{{ .Render "project-summary"}}

@@ -21,7 +21,7 @@
               {{ i18n "reading_time" .ReadingTime }}
             </span>
           </div>
-          {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
+          {{ with .Page.Params.Skills }}{{ partial "taxonomy/skills.html" . }}{{ end }}
           {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
         </div>
       </header>

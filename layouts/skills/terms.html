@@ -1,0 +1,17 @@
+{{ define "title" }}
+  {{- i18n .Data.Singular | title -}}
+{{ end }}
+{{ define "content" }}
+  <div class="full-width">
+    {{ range $key, $taxonomy := .Site.Taxonomies.skills }}
+      <section class="container">
+        <h1 class="title">{{ $key }}</h1>
+        <div class="grid">
+          {{- range $taxonomy.Pages -}}
+            {{- .Render "project-summary" -}}
+          {{- end -}}
+        </div>
+      </section>
+    {{ end }}
+  </div>
+{{end}}
