@@ -2,15 +2,34 @@
   {{ .Title }} · {{ .Site.Title }}
 {{ end }}
 {{ define "content" }}
-  <section class="container list">
-    <h1 class="title">{{ .Title }}</h1>
-
-    <ul>
-      {{- range .Paginator.Pages -}}
-        {{- .Render "li" -}}
-      {{- end -}}
-    </ul>
-
-    {{ partial "pagination.html" . }}
+  <section class="container blog">
+    <div class="grid two-col">
+      <section class="main-content">
+        <h1 class="title">{{ .Title }}</h1>
+        {{ range first 10 .Pages }}
+          <article>
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
+              {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
+            </time>
+            {{ .Content }}
+          </article>
+        {{ end }}
+      </section>
+      <aside>
+        <nav class="posts-nav list">
+          {{ range .Pages.GroupByDate "Jan 2006" }}
+          <p>{{ .Key }}</p>
+          <ul>
+              {{ range .Pages }}
+              <li>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+              </li>
+              {{ end }}
+          </ul>
+          {{ end }}
+        </nav>
+      </aside>
+    </div>
   </section>
 {{ end }}

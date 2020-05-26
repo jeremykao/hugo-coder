@@ -6,7 +6,7 @@
 {{ define "content" }}
   <section class="container">
     <h1 class="title">{{ .Title }}</h1>
-    <div class="grid">
+    <div class="project-item-grid">
       {{- range .Paginator.Pages -}}
         {{- .Render "../projects/li" -}}
       {{- end -}}

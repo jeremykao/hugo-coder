@@ -1,3 +1,6 @@
+$content-width: 90.0rem;
+$content-nav-width: 30.0rem;
+
 *,
 *:after,
 *:before {
@@ -181,7 +184,7 @@ figure {
 
 .container {
   margin: 0 auto;
-  max-width: 90.0rem;
+  max-width: $content-width;
   width: 100%;
   padding-left: 2.0rem;
   padding-right: 2.0rem;
@@ -217,4 +220,17 @@ figure {
 
 .full-width {
   width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-column-gap: 12px;
+  grid-row-gap: 16px;
+
+  &.two-col {
+    grid-template-columns: $content-width $content-nav-width;
+  }
+}
+.blog {
+  max-width: $content-width + $content-nav-width;
 }

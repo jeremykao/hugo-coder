@@ -5,8 +5,8 @@
   <section class="container">
     <h1 class="title">{{ .Title }}</h1>
     <p>If you're interested, you can check out my projects organized by particular <a href={{ref . "/skills"}}>skills</a>.</p>
-    <div class="grid">
-      {{- range .Paginator.Pages -}}
+    <div class="project-item-grid">
+      {{- range .Pages -}}
         {{- .Render "li" -}}
       {{- end -}}
     </div>

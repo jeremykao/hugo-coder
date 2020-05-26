@@ -125,9 +125,15 @@ $white-text-color: #dadada;
       }
     }
   }
+
+  &.posts-nav {
+    ul {
+      margin: 1rem 0;
+    }
+  }
 }
 
-.grid {
+.project-item-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax($project-item-width, 1fr) ) ;
   grid-column-gap: 12px;
