@@ -1,0 +1,14 @@
+<article class="post-summary">
+  <div>
+    <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
+      {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
+    </time>
+    <h2 class="title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    {{ .Summary }}
+  </div>
+  {{ if .Truncated }}
+  <div>
+    <a href="{{ .RelPermalink }}">Read More…</a>
+  </div>
+  {{ end }}
+</article>
